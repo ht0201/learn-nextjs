@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   function goToDetailPage() {
     router.push({
-      pathname: '/post/[postId]',
+      pathname: '/posts/[postId]',
       query: {
         postId: '123',
         ref: 'social',
