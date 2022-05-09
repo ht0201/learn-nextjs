@@ -7,7 +7,7 @@ export interface PostListPageProps {
 }
 
 export default function PostListPage({ posts }: PostListPageProps) {
-  // console.log('posts', posts);
+  console.log('posts', posts);
   return (
     <div>
       <h2>Post List Page</h2>

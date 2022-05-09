@@ -29,6 +29,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: data.data.map((post: any) => ({ params: { postId: post.id } })),
     fallback: false,
+    // ISR
+    // fallback: 'blocking',          chờ call api lấy data
+    // fallback: true,          trong lúc chờ call api thì show component Loading...
   };
 };
 
