@@ -21,7 +21,6 @@ export default function AboutPage(props: AboutPageProps) {
       router.push(`/about?page=1`);
       return;
     }
-
     (async () => {
       const res = await fetch(
         `https://js-post-api.herokuapp.com/api/posts?_page=${page}`
@@ -29,6 +28,7 @@ export default function AboutPage(props: AboutPageProps) {
       const data = await res.json();
       setPosts(data.data);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const handleNextPage = () => {
