@@ -2,8 +2,6 @@ import { LayoutProps } from '@/models/index';
 import Link from 'next/link';
 import * as React from 'react';
 
-export interface IMainLayoutProps {}
-
 export function MainLayout({ children }: LayoutProps) {
   return (
     <div>

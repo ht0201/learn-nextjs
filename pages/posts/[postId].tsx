@@ -25,7 +25,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'https://js-post-api.herokuapp.com/api/posts?_page=1'
   );
   const data = await res.json();
-  console.log('data', data);
+  // console.log('data', data);
   return {
     paths: data.data.map((post: any) => ({ params: { postId: post.id } })),
     fallback: false,

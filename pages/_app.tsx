@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import type { AppPropsWithLayout } from '@/models/index';
-import { EmptyLayout } from './components/layout/empty';
+import { EmptyLayout } from '@/components/layout';
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const Layout = Component.Layout ?? EmptyLayout;
