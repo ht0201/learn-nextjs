@@ -12,6 +12,9 @@ export function MainLayout({ children }: LayoutProps) {
       <Link href='/about'>
         <a> About</a>
       </Link>
+      <Link href='/login'>
+        <a> Login</a>
+      </Link>
       <div>{children}</div>
     </div>
   );
