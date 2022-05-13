@@ -21,6 +21,7 @@
       // "@/models/*": ["./models/*"]
       // "@/layout/*": ["./layout/*"]
     }
+    // "useUnknownInCatchVariables": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

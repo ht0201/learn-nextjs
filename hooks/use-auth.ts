@@ -2,9 +2,14 @@ import { authApi } from '@/api-client';
 import * as React from 'react';
 import useSWR from 'swr';
 import { PublicConfiguration } from 'swr/dist/types';
-export interface useAuthProps {}
+export interface useAuthProps {
+  profile?: any;
+  firstLoading: boolean;
+  login: () => Promise<void>;
+  logout: () => Promise<void>;
+}
 
-export function useAuth(options?: Partial<PublicConfiguration>) {
+export function useAuth(options?: Partial<PublicConfiguration>): useAuthProps {
   const {
     data: profile,
     error,
@@ -15,6 +20,8 @@ export function useAuth(options?: Partial<PublicConfiguration>) {
     ...options,
   });
 
+  const firstLoading = profile === undefined && error === undefined;
+  console.log(profile, error);
   async function login() {
     await authApi.login({
       username: 'html',
@@ -30,5 +37,6 @@ export function useAuth(options?: Partial<PublicConfiguration>) {
     profile,
     login,
     logout,
+    firstLoading,
   };
 }

@@ -1,11 +1,13 @@
 import { authApi } from '@/api-client';
 import axiosClient from '@/api-client/axios-client';
 import { useAuth } from '@/hooks';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 
 export interface LoginProps {}
 
 export default function LoginPage(props: LoginProps) {
+  const router = useRouter();
   const { profile, login, logout } = useAuth({
     revalidateOnMount: false,
   });
@@ -16,6 +18,7 @@ export default function LoginPage(props: LoginProps) {
       //   password: '123456',
       // });
       await login();
+      router.push('./about');
       console.log('redirect to dashboard');
     } catch (error) {
       console.log('failed to login', error);
@@ -45,6 +48,7 @@ export default function LoginPage(props: LoginProps) {
       <button onClick={handleLogin}> Login </button>
       {/* <button onClick={handleGetProfile}> Get profile </button> */}
       <button onClick={handleLogout}> Logout </button>
+      <button onClick={() => router.push('/about')}> Go to about </button>
     </div>
   );
 }
