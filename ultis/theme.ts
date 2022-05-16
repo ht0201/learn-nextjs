@@ -1,5 +1,5 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
 // Create a theme instance.
 export let theme = createTheme({
@@ -62,6 +62,26 @@ export let theme = createTheme({
 					props: { variant: 'contained', color: 'primary' },
 					style: {
 						color: 'white',
+					},
+				},
+			],
+		},
+		MuiChip: {
+			styleOverrides: {
+				root: {
+					paddingInline: 2,
+				},
+			},
+			variants: [
+				{
+					props: {
+						color: 'secondary',
+					},
+					style: {
+						color: 'white',
+						fontSize: 16,
+						fontWeight: 'bold',
+						backgroundColor: '#142850',
 					},
 				},
 			],

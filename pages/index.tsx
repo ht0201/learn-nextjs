@@ -1,6 +1,10 @@
-import { HeroSection, RecentPostsSection } from '@/components/home'
+import {
+	HeroSection,
+	RecentPostsSection,
+	FeatureWorksSection,
+} from '@/components/home'
 import { MainLayout } from '@/components/layout'
-import type { NextPageWithLayout } from '@/models/index'
+import type { NextPageWithLayout } from '@/models'
 import { Box } from '@mui/material'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
@@ -20,6 +24,7 @@ const Home: NextPageWithLayout = () => {
 		<Box>
 			<HeroSection />
 			<RecentPostsSection />
+			<FeatureWorksSection />
 		</Box>
 	)
 }

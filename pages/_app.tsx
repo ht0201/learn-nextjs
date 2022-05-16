@@ -1,6 +1,6 @@
 import axiosClient from '@/api-client/axios-client'
 import { EmptyLayout } from '@/components/layout'
-import type { AppPropsWithLayout } from '@/models/index'
+import type { AppPropsWithLayout } from '@/models'
 import { createEmotionCache, theme } from '@/ultis'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import CssBaseline from '@mui/material/CssBaseline'
